@@ -1,61 +1,24 @@
-# Scroll CTA Highlight – ES Module + TypeScript
+# ES Module + TypeScript – Scroll CTA Highlight
 
-## About
-This subproject provides a **vanilla JavaScript / TypeScript ES module** implementation of a scroll-triggered Call-to-Action (CTA) highlight feature.
-
-**License:** MIT – see [LICENSE](../LICENSE)
-
----
-
-## Features
-- Scroll Highlight: Button changes style after scrolling past threshold
-- Configurable scroll threshold and styles
-- Optional click handler via `buttonSelector`
-- Accessible: Focus outlines, reduced-motion support
-- Unit tested with Vitest + jsdom
-
----
-
-## Folder Structure
-
-es-module/
-├── demo/ # Demo page
-├── dist/ # Compiled TypeScript output
-├── node_modules/
-├── src/
-│ ├── core/ # Main logic (createScrollCta, scrollHandler, types)
-│ ├── index.ts # Exports
-│ └── styles/ # scrollCta.css
-├── tests/ # Vitest + jsdom tests
-├── package.json
-├── tsconfig.json
-├── vitest.config.ts
-├── .eslintrc.cjs
-├── .prettierrc
-├── .editorconfig
-├── LICENSE
-└── README.md
-
----
-
-## Prerequisites
-- Node.js ≥ 20  
-- npm ≥ 9  
+## Overview
+This subproject demonstrates a scroll-triggered CTA highlight using a vanilla ES Module with TypeScript.
 
 ---
 
 ## Installation
-
-```bash
-cd es-module
+```
 npm install
 npm run build
 ```
 
 ---
 
+## Demo
+Open demo/index.html in a browser to see the CTA button highlight after scrolling past the threshold.
+
+---
+
 ## Usage
-Open demo/index.html or import the module:
 ```
 import { createScrollCta } from './core/createScrollCta.js';
 
@@ -69,15 +32,6 @@ createScrollCta({
 
 ---
 
-## Options
-Option	Default	Description
-buttonSelector	#cta-button	Selector for CTA button
-threshold	500	ScrollY value to trigger highlight
-defaultClass	default-style	Normal button style
-highlightClass	highlight-style	Highlighted button style
-
----
-
 ## Testing
 ```
 npm test
@@ -85,11 +39,36 @@ npm test
 
 ---
 
-## Linting & Formatting
+## Project Structure
 ```
-npm run lint
-npm run format
+es-module/
+├── LICENSE
+├── package.json
+├── tsconfig.json
+├── vitest.config.ts
+├── demo/index.html
+├── src
+│   ├── index.ts
+│   ├── core
+│   │   ├── createScrollCta.ts
+│   │   ├── scrollHandler.ts
+│   │   └── types.ts
+│   └── styles/scrollCta.css
+└── tests/scrollCta.test.ts
 ```
-Configured via ESLint, Prettier, and .editorconfig.
+
+---
+
+## Props / Options (ES Module)
+Option	Default	Description
+buttonSelector	#cta-button	Selector for the CTA button
+threshold	500	ScrollY value to trigger highlight
+defaultClass	default-style	Normal button style
+highlightClass	highlight-style	Highlighted button style
+
+---
+
+## License
+MIT License – see LICENSE
 
 ---

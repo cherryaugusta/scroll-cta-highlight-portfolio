@@ -1,4 +1,3 @@
-
 # Scroll CTA Highlight Portfolio
 
 ## About
@@ -37,51 +36,60 @@ Both versions include:
 ---
 
 ## Folder Structure
-
 ```
-
 scroll-cta-highlight-portfolio/
-├── .venv/                               # Optional Python virtual environment
-├── .vscode/
-│   ├── extensions.json                  # Recommended VS Code extensions
-│   └── settings.json                    # Editor & formatting settings
-├── es-module/                           # ES Module + TypeScript subproject
-│   ├── demo/                            # Demo page
-│   ├── dist/                            # Compiled output
-│   ├── node_modules/
-│   ├── src/
-│   │   ├── core/                        # Main logic
-│   │   ├── index.ts                      # Exports
-│   │   └── styles/                       # CSS
-│   ├── tests/                            # Vitest + jsdom tests
-│   ├── package.json
-│   ├── tsconfig.json
-│   ├── vitest.config.ts
-│   ├── .eslintrc.cjs
-│   ├── .prettierrc
-│   ├── .editorconfig
-│   ├── LICENSE
-│   └── README.md
-├── react/
-│   └── scroll-cta-highlight-react/      # React + TypeScript subproject
-│       ├── public/                       # Root HTML
-│       ├── src/
-│       │   ├── components/              # ScrollCta.tsx
-│       │   ├── App.tsx
-│       │   ├── main.tsx
-│       │   └── index.css                 # Styles
-│       ├── package.json
-│       ├── tsconfig.json
-│       ├── vite.config.ts
-│       ├── .eslintrc.cjs
-│       ├── .prettierrc
-│       ├── .editorconfig
-│       ├── LICENSE
-│       └── README.md
+├── .venv/ # Optional Python virtual environment
+├── README.md
+├── es-module
+│ ├── LICENSE
+│ ├── package.json
+│ ├── package-lock.json
+│ ├── README.md
+│ ├── tsconfig.json
+│ ├── vitest.config.ts
+│ ├── demo
+│ │ └── index.html
+│ ├── src
+│ │ ├── index.ts
+│ │ ├── core
+│ │ │ ├── createScrollCta.ts
+│ │ │ ├── scrollHandler.ts
+│ │ │ └── types.ts
+│ │ └── styles
+│ │ └── scrollCta.css
+│ └── tests
+│ └── scrollCta.test.ts
+└── react
+└── scroll-cta-highlight-react
+├── .eslintrc.cjs
 ├── .gitignore
-└── README.md
-
-````
+├── eslint.config.js
+├── index.html
+├── LICENSE
+├── package.json
+├── package-lock.json
+├── README.md
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+├── vite.config.ts
+├── .vscode
+│ ├── extensions.json
+│ └── settings.json
+├── public
+│ └── vite.svg
+└── src
+├── App.css
+├── App.tsx
+├── index.css
+├── main.tsx
+├── setupTests.ts
+├── assets
+│ └── react.svg
+└── components
+├── ScrollCta.test.tsx
+└── ScrollCta.tsx
+```
 
 ---
 
@@ -97,15 +105,13 @@ scroll-cta-highlight-portfolio/
 ## Installation
 
 ### ES Module
-```bash
+```
 cd es-module
 npm install
 npm run build
-````
-
-### React
-
-```bash
+```
+React
+```
 cd react/scroll-cta-highlight-react
 npm install
 npm run dev
@@ -114,12 +120,8 @@ npm run dev
 ---
 
 ## Usage Examples
-
-### ES Module
-
-Open `demo/index.html` or import in your JS/TS:
-
-```ts
+ES Module
+```
 import { createScrollCta } from './core/createScrollCta.js';
 
 createScrollCta({
@@ -129,10 +131,8 @@ createScrollCta({
   defaultClass: 'default-style'
 });
 ```
-
-### React
-
-```tsx
+React
+```
 import ScrollCta from './components/ScrollCta';
 
 function App() {
@@ -153,30 +153,24 @@ export default App;
 ---
 
 ## Props / Options
-
-| Option / Prop    | Default           | Description                              |
-| ---------------- | ----------------- | ---------------------------------------- |
-| `threshold`      | `500`             | ScrollY value to trigger highlight       |
-| `defaultClass`   | `default-style`   | Normal button style                      |
-| `highlightClass` | `highlight-style` | Highlighted button style                 |
-| `label`          | `Sign Up`         | Button text (React only)                 |
-| `onClick`        | `undefined`       | Optional click handler (React only)      |
-| `buttonSelector` | `#cta-button`     | Selector for CTA button (ES Module only) |
+Option / Prop	Default	Description
+threshold	500	ScrollY value to trigger highlight
+defaultClass	default-style	Normal button style
+highlightClass	highlight-style	Highlighted button style
+label	Sign Up	Button text (React only)
+onClick	undefined	Optional click handler (React only)
+buttonSelector	#cta-button	Selector for CTA button (ES Module only)
 
 ---
 
 ## Testing
-
-### ES Module
-
-```bash
+ES Module
+```
 cd es-module
 npm test
 ```
-
-### React
-
-```bash
+React
+```
 cd react/scroll-cta-highlight-react
 npm test
 ```
@@ -184,28 +178,22 @@ npm test
 ---
 
 ## Linting & Formatting
-
-```bash
+```
 npm run lint
 npm run format
 ```
-
-Configured via ESLint, Prettier, and `.editorconfig`.
+Configured via ESLint, Prettier, and .editorconfig.
 
 ---
 
 ## CI/CD Workflow
-
 GitHub Actions automatically:
-
-1. Installs dependencies
-2. Runs ESLint for linting
-3. Builds the project
-4. Runs unit tests
-
-`.github/workflows/ci.yml`:
-
-```yaml
+1.	Installs dependencies
+2.	Runs ESLint for linting
+3.	Builds the project
+4.	Runs unit tests
+```
+.github/workflows/ci.yml:
 name: CI
 on:
   push:
@@ -235,5 +223,6 @@ jobs:
 ---
 
 ## License
+MIT License – see LICENSE
 
-MIT License – see [LICENSE](LICENSE)
+---

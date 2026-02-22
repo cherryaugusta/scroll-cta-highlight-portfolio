@@ -1,54 +1,14 @@
-# Scroll CTA Highlight – React + TypeScript
+# React + TypeScript – Scroll CTA Highlight
 
-## About
-This subproject provides a **React component** implementation of a scroll-triggered Call-to-Action (CTA) highlight feature using TypeScript and Vite.
-
-**License:** MIT – see [LICENSE](../LICENSE)
+## Overview
+This subproject demonstrates a scroll-triggered CTA highlight using React + TypeScript (Vite).
 
 ---
 
-## Features
-- Scroll Highlight: Button changes style after scrolling past threshold
-- Optional `onClick` handler
-- Configurable scroll threshold and styles
-- Accessible: Focus outlines, reduced-motion support
-- Unit tested with Vitest + @testing-library/react
-
----
-
-## Folder Structure
-
-scroll-cta-highlight-react/
-├── public/ # Root HTML
-├── src/
-│ ├── components/ # ScrollCta.tsx
-│ ├── App.tsx
-│ ├── main.tsx # ReactDOM entry
-│ └── index.css # Styles
-├── package.json
-├── tsconfig.json
-├── vite.config.ts
-├── .eslintrc.cjs
-├── .prettierrc
-├── .editorconfig
-├── LICENSE
-└── README.md
-
----
-
-## Prerequisites
-- Node.js ≥ 20  
-- npm ≥ 9  
-
----
-
-## Installation & Development
-
+## Installation
 ```
-cd react/scroll-cta-highlight-react
 npm install
 npm run dev
-Open http://localhost:5173 to view in browser.
 ```
 
 ---
@@ -74,7 +34,36 @@ export default App;
 
 ---
 
-## Props
+## Testing
+```
+npm test
+```
+
+---
+
+## Project Structure
+```
+scroll-cta-highlight-react/
+├── LICENSE
+├── package.json
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+├── vite.config.ts
+├── public/
+│   └── vite.svg
+├── src/
+│   ├── App.tsx
+│   ├── main.tsx
+│   ├── index.css
+│   └── components/
+│       ├── ScrollCta.tsx
+│       └── ScrollCta.test.tsx
+```
+
+---
+
+## Props / Options (React)
 Prop	Default	Description
 threshold	500	ScrollY value to trigger highlight
 defaultClass	default-style	Normal button style
@@ -84,18 +73,7 @@ onClick	undefined	Optional click handler
 
 ---
 
-## Testing
-```
-npm test
-```
-
----
-
-## Linting & Formatting
-```
-npm run lint
-npm run format
-```
-Configured via ESLint, Prettier, and .editorconfig.
+## License
+MIT License – see LICENSE
 
 ---
