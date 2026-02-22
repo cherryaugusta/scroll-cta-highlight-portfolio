@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  es-module-and-react:
+    runs-on: windows-latest
+
+    strategy:
+      matrix:
+        subproject: [es-module, react/scroll-cta-highlight-react]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: ${{ matrix.subproject }}
+
+      - name: Run Lint
+        run: npm run lint
+        working-directory: ${{ matrix.subproject }}
+
+      - name: Build Project
+        run: npm run build
+        working-directory: ${{ matrix.subproject }}
+
+      - name: Run Tests
+        run: npm test
+        working-directory: ${{ matrix.subproject }}
