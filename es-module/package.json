@@ -4,14 +4,25 @@
   "description": "ES Module + TypeScript scroll CTA highlight library",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "scripts": { "build": "tsc", "test": "vitest run", "lint": "eslint src --ext .ts", "format": "prettier --write ." },
-  "keywords": ["scroll","cta","typescript","esmodule","portfolio"],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "lint": "eslint src --ext .ts",
+    "format": "prettier --write ."
+  },
+  "keywords": [
+    "scroll",
+    "cta",
+    "typescript",
+    "esmodule",
+    "portfolio"
+  ],
   "author": "Cherry_Augusta",
   "license": "MIT",
   "devDependencies": {
     "@testing-library/dom": "^9.0.0",
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.56.0",
+    "@typescript-eslint/parser": "^8.56.0",
     "eslint": "^8.0.0",
     "eslint-config-prettier": "^9.0.0",
     "jsdom": "^22.0.0",
