@@ -1,0 +1,16 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "ms-vscode.vscode-typescript-tslint-plugin",
+    "visualstudioexptteam.vscodeintellicode",
+    "msjsdiag.debugger-for-chrome",
+    "wix.vscode-import-cost",
+    "formulahendry.auto-rename-tag",
+    "formulahendry.auto-close-tag",
+    "eamodio.gitlens",
+    "christian-kohler.path-intellisense",
+    "gruntfuggly.todo-tree",
+    "vscode-icons-team.vscode-icons"
+  ]
+}

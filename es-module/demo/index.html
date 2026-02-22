@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scroll CTA Demo</title>
+  <link rel="stylesheet" href="../src/styles/scrollCta.css">
+</head>
+<body style="height:2000px; padding:50px;">
+  <button id="cta-button" class="default-style">Sign Up</button>
+  <script type="module">
+    import { createScrollCta } from '../src/core/createScrollCta.js';
+    createScrollCta({ threshold: 300 });
+  </script>
+</body>
+</html>
