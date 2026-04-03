@@ -330,9 +330,7 @@ For stronger GitHub presentation, use:
 
 ## License
 
-This repository is licensed under the MIT License.
-
-Copyright (c) 2026 Cherry Augusta
+This project is licensed under the MIT License.
 
 See the [LICENSE](./LICENSE) file for full details.
 
